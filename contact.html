@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+        <title>Contact Us - FitLab</title>
+        <link rel="stylesheet" href="contact.css"/>
+        <link rel="stylesheet" href="Head_Foot.css" />
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html" class="logo"><img src="image/logo.png" alt="Fitlab"></a>
+            <nav id="HorizontalNav" class="HorizontalNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Fitness Accessories</a></li>
+                    <li><a href="menu2.html">Fitness Supplement</a></li>
+                    </ul>
+            </nav>
+            <div class="AccountNav">
+                <a href="login.html"><img class="user" src="headerNfooter/user.png" alt="LogIn"></a>
+                <a href="faq.html"><img class="faq" src="headerNfooter/faq.png" alt="FAQ"></a>
+            </div>
+        </header>
+    
+        <!-- Background Music -->
+        <audio autoplay loop>
+            <source src="backgroundMusic.ogg" type="audio/ogg" >
+            <source src="backgroundMusic.mp3" type="audio/mpeg" >
+        </audio>
+
+        <div class="contact-container">
+            <form action="#" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Customer Enquiry</h2>
+                    <hr>
+                </div>
+                <div class="input">
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="contact-input" autocomplete="off"/>
+                    <div class="error-txt">Full Name can't be blank</div>
+                </div>
+                <div class="input">
+                    <input type="text" id="email" name="email" placeholder="Your Email" class="contact-input" autocomplete="off"/>
+                    <div class="error-txt email">Email Address can't be blank</div>
+                </div>
+                
+
+                <div class="input">
+                    <input type="tel" id="tel" name="tel" placeholder="Your Phone number" class="contact-input" autocomplete="off"/>
+                    <div class="error-txt phone">Phone number can't be blank</div>
+                </div>
+                
+                <div class="input">
+                    <textarea name="message" id="message" placeholder="Your Enquiry" class="contact-input" autocomplete="off" style="height: 200px;"></textarea>
+                    <div class="error-txt">Enter your Enquiry</div>
+                </div>
+                
+                <button type="submit">Submit <img src="image/arrow.png" alt=""></button>
+            </form>
+            <div class="contact-right">
+                <img src="image/contact.png" alt="Enquiry">
+            </div>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footerCol">
+                        <h4>Shop With Us</h4>
+                        <ul>
+                            <li><a href="login.html">Register</a></li>
+                            <li><a href="about.html">About us</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Customer Care</h4>
+                        <ul>
+                            <li><a href="faq.html">Help & FAQ</a></li>
+                            <li><a href="rating.html">Rate Us</a></li>
+                            <li><a href="contact.html">Enquiry</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Follow Us</h4>
+                        <div class="socialMedia">
+                            <a href="https://www.facebook.com/"><img src="headerNfooter/facebook.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/"><img src="headerNfooter/insta.png" alt="Instagram"></a>
+                            <a href="https://www.tiktok.com/explore"><img src="headerNfooter/tiktok.png" alt="Tiktok"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="contact.js"></script>
+    </body>
+</html>

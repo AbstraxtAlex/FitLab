@@ -1,0 +1,246 @@
+/* Container for all coach images */
+.coaches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adjust gap between items as needed */
+}
+
+/* Individual coach entry */
+.coach {
+    position: relative;
+    width: 200px; 
+    height: 250px; 
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coach:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Coach image styling */
+.coach img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+}
+
+/* Coach info styling */
+.coach-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light border for separation */
+}
+
+.coach-info h3 {
+    margin: 0;
+    font-size: 16px; /* Adjust font size as needed */
+    color: white;
+}
+
+.coach-info p {
+    margin: 5px 0 0;
+    font-size: 14px; /* Adjust font size as needed */
+    color: white;
+}
+
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Container for all zones */
+.zones {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between zones */
+    padding: 20px;
+}
+
+/* Individual zone styling */
+.zone {
+    flex: 1 1 30%; 
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; 
+}
+
+/* Hover effect */
+.zone:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Images within each zone */
+.zone img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+
+/* Weight Zone */
+.weight-zone {
+    background: gainsboro; 
+    border: 5px solid #ccc; /* Grey border */
+}
+
+/* Cardio Zone */
+.cardio-zone {
+    background: gainsboro; 
+    border: 5px solid #ccc; /* Grey border */
+}
+
+/* Yoga Zone */
+.yoga-zone {
+    background: gainsboro; 
+    border: 5px solid #ccc; /* Grey border */
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.class-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #3498db;
+    margin-top: 0;
+}
+
+.animate__animated {
+    animation-duration: 1s;
+}
+
+
+
+.luxury-font {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#intro, #classes {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media only screen and (max-width: 480px) {
+    /* Coach Section */
+    .coaches {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coach {
+        width: 100%;
+        height: auto;
+    }
+
+    .coach-info h3 {
+        font-size: 14px;
+    }
+
+    .coach-info p {
+        font-size: 12px;
+    }
+
+    /* Zone Section */
+    .zones {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .zone {
+        flex: 1 1 100%;
+    }
+
+    .zone img {
+        height: auto;
+    }
+
+    /* Class Cards Section */
+    .class-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* General Adjustments */
+    h2 {
+        font-size: 24px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+
+    #intro, #classes {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}

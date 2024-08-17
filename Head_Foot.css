@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* Text Format */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+/* ========================================== */
+
+/* Header */
+nav{
+    list-style: none;
+}
+
+header li, header a{
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+li a:hover{
+    color: rgb(255, 94, 14);
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+}
+
+.logo img{
+    width: 300px;
+    height: 150px;
+    object-fit: scale-down;
+}
+
+
+/* Horizontal Navigation */
+.HorizontalNav li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/* User Account and FAQ */
+.AccountNav > *{
+    padding-left: 1em;
+}
+.AccountNav{
+    display: flex;
+}
+
+.AccountNav img{
+    width: 25px;
+    height: 25px;
+    object-fit: scale-down;
+}
+
+
+
+
+
+/* ========================================== */
+
+/* Footer */
+footer .container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer{
+    background-color: black;
+    padding: 70px 0;
+}
+
+.footerCol{
+    width: 30%;
+    padding: 0 15px;
+ }
+
+.footerCol h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+/*Line between the h4 and li */
+.footerCol h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color:rgb(255, 94, 14);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footerCol ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footerCol ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footerCol ul li a:hover{
+	color: white;
+	padding-left: 8px;
+}
+
+.socialMedia a{
+    padding-left: 10px;
+}
+
+.socialMedia img{
+    height: 25px;
+    width: 25px;
+    object-fit: scale-down;
+}
+
+/* ========================================== */
+
+/*Responsive Footer*/
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    .HorizontalNav li {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .AccountNav {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    footer .container {
+        padding: 0 20px;
+    }
+
+    .footerCol {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .HorizontalNav li {
+        padding: 8px 0;
+        text-align: center;
+    }
+
+    .AccountNav img {
+        width: 20px;
+        height: 20px;
+    }
+
+    footer {
+        padding: 40px 0;
+    }
+
+    .footerCol {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    footer ul li a {
+        font-size: 14px;
+    }
+}
+
+
+
+
+

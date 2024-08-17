@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLab Gym Overview</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="gym.css">
+    <link rel="stylesheet" href="Head_Foot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo"><img src="image/logo.jpeg" alt="Fitlab"></a>
+            <nav id="HorizontalNav" class="HorizontalNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Fitness Accessories</a></li>
+                    <li><a href="menu2.html">Fitness Supplement</a></li>
+                </ul>
+            </nav>
+            <div class="AccountNav">
+                <a href="login.html"><img class="user" src="headerNfooter/user.png" alt="LogIn"></a>
+                <a href="faq.html"><img class="faq" src="headerNfooter/faq.jpeg" alt="FAQ"></a>
+            </div>
+    
+
+        </header>          
+
+
+
+        <!-- Introduction Section -->
+        <section id="intro" class="animate__animated animate__fadeInUp">
+            <h2 class="luxury-font">Welcome to FitLab</h2>
+            <p class="intro-text">FitLab offers comprehensive facilities, including free weights and machines. We also have a cardio area and a yoga zone. Additionally, we provide yoga classes and personal training sessions.</p>
+        </section>
+
+        <!-- Classes Section -->
+        <section id="classes" class="animate__animated animate__fadeInUp">
+            <h2 class="classes">Our Classes</h2>
+            <div class="class-cards">
+                <div class="card">
+                    <h3>Yoga</h3>
+                    <p>Experience the best Yoga classes to improve your flexibility and mental peace.</p>
+                </div>
+                <div class="card">
+                    <h3>Personal Gym Coaching</h3>
+                    <p>Get personalized training plans tailored to your fitness goals.</p>
+                </div>
+                <div class="card">
+                    <h3>HIIT</h3>
+                    <p>Join our High-Intensity Interval Training for quick and effective results.</p>
+                </div>
+            </div>
+            <div class="zones">
+                <div class="zone weight-zone">
+                    <img src="image/weight.webp" alt="Weight Zone">
+                    <h2>Weight Zone</h2>
+                    <p>Our state-of-the-art weightlifting equipment is designed to help you build strength and achieve your fitness goals.</p>
+                </div>
+                <div class="zone cardio-zone">
+                    <img src="image/cardio.avif" alt="Cardio Zone">
+                    <h2>Cardio Zone</h2>
+                    <p>Get your heart pumping with our extensive range of cardio machines, including treadmills, ellipticals, and more.</p>
+                </div>
+                <div class="zone yoga-zone">
+                    <img src="image/yzone.jpg" alt="Yoga Zone">
+                    <h2>Yoga Zone</h2>
+                    <p>Relax and rejuvenate in our serene yoga zone, equipped with mats and props for a comprehensive practice.</p>
+                </div>
+
+            </div>
+            
+        
+        
+
+        <!-- Coaches Section -->
+        <div class="coaches">
+            <h2>Our Coaches</h2>
+            <div class="coach">
+                <a href=Chris Bumsteadinstra><img src="image/chris.webp" alt="Coach 1"></a>
+                <div class="coach-info">
+                    <h3>Chris Bumsteadinstra</h3>
+                    <p>Yoga Instructor</p>
+                </div>
+            </div>
+            <div class="coach">
+                <a href="https://www.instagram.com/mikeohearn/"></a><img src="image/mike.webp" alt="Coach 2">
+                <div class="coach-info">
+                    <h3>Mike O'Hearn</h3>
+                    <p>Gym Coach</p>
+                </div>
+            </div>
+            <div class="coach">
+                <a href="https://www.instagram.com/ronniecoleman8"></a><img src="image/ronnie.jpg" alt="Coach 2">
+                <div class="coach-info">
+                    <h3>Ronnie Coleman</h3>
+                    <p>HIIT Coach</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footerCol">
+                        <h4>Shop With Us</h4>
+                        <ul>
+                            <li><a href="login.html">Register</a></li>
+                            <li><a href="about.html">About us</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Customer Care</h4>
+                        <ul>
+                            <li><a href="faq.html">Help & FAQ</a></li>
+                            <li><a href="rating.html">Rate Us</a></li>
+                            <li><a href="contact.html">Enquiry</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Follow Us</h4>
+                        <div class="socialMedia">
+                            <a href="https://www.facebook.com/"><img src="headerNfooter/facebook.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/"><img src="headerNfooter/insta.png" alt="Instagram"></a>
+                            <a href="https://www.tiktok.com/explore"><img src="headerNfooter/tiktok.png" alt="Tiktok"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    <script>
+        // Auto-sliding Carousel
+        let slideIndex = 0;
+        const slides = document.querySelector('.carousel-slide').children;
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        showSlides();
+    </script>
+</body>
+
+</html>

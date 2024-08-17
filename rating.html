@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="rating.css"/>
+        <link rel="stylesheet" href="Head_Foot.css"/>
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Rating - FitLab</title>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo"><img src="image/logo.png" alt="Fitlab"></a>
+            <nav id="HorizontalNav" class="HorizontalNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Fitness Accessories</a></li>
+                    <li><a href="menu2.html">Fitness Supplement</a></li>
+                    </ul>
+            </nav>
+            <div class="AccountNav">
+                <a href="login.html"><img class="user" src="headerNfooter/user.png" alt="LogIn"></a>
+                <a href="faq.html"><img class="faq" src="headerNfooter/faq.png" alt="FAQ"></a>
+            </div>
+        </header>
+    
+        <!-- Background Music -->
+
+        <br>
+    
+        <div class="wrapper">
+            <h3>Customer FeedBack</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="rating" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+                <div class="input">
+                    <input type="text" id="email" name="email" placeholder="Your Email" class="feedback-input" autocomplete="off"/>
+                    <div class="error-txt email">Email Address can't be blank</div>
+                </div>
+                <div class="input">
+                    <textarea id="opinion" name="opinion" cols="30" rows="5" placeholder="Give us feedback to help improve our web" class="feedback-input" autocomplete="off"></textarea>
+                    <div class="error-txt">Opinion can't be blank</div>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn submit">Submit</button>
+                    <button type="reset" class="btn cancel">Reset</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footerCol">
+                        <h4>Shop With Us</h4>
+                        <ul>
+                            <li><a href="login.html">Register</a></li>
+                            <li><a href="about.html">About us</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Customer Care</h4>
+                        <ul>
+                            <li><a href="faq.html">Help & FAQ</a></li>
+                            <li><a href="rating.html">Rate Us</a></li>
+                            <li><a href="contact.html">Enquiry</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Follow Us</h4>
+                        <div class="socialMedia">
+                            <a href="https://www.facebook.com/"><img src="headerNfooter/facebook.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/"><img src="headerNfooter/insta.png" alt="Instagram"></a>
+                            <a href="https://www.tiktok.com/explore"><img src="headerNfooter/tiktok.png" alt="Tiktok"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="rating.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>

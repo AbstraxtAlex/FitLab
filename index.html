@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitLab</title>
+    <link rel="stylesheet" href="Head_Foot.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="image/logo.jpeg" alt="Fitlab"></a>
+        <nav id="HorizontalNav" class="HorizontalNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Fitness Accessories</a></li>
+                <li><a href="menu2.html">Fitness Supplement</a></li>
+            </ul>
+        </nav>
+        <div class="AccountNav">
+            <a href="login.html"><img class="user" src="headerNfooter/user.png" alt="LogIn"></a>
+            <a href="faq.html"><img class="faq" src="headerNfooter/faq.jpeg" alt="FAQ"></a>
+        </div>
+
+        <div class="language-switcher">
+            <a href="about_en.html">English</a> | 
+            <a href="aboutcn.html">中文</a> <!-- Chinese version -->
+        </div>
+    </header>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="backgroundMusic.ogg" type="audio/ogg" >
+        <source src="backgroundMusic.mp3" type="audio/mpeg" >
+    </audio>
+
+
+    <!-- Home Banner -->
+    <div class="homeBanner">
+        <a href="gym.html">
+                <video autoplay loop muted plays-inline class="FitlabVideo">
+                    <source src="image/homevideo.mp4" type="video/mp4">
+                </video>
+                <h1>FitLab: Empower Your Journey to Wellness!</h1><br>
+                <p>Unleash your pontential with fitness in FitLab</p>
+        </a>
+
+    </div>
+
+<!-- Interactive Slide Show -->
+<div class="slider">
+    <div class="slides">
+        <a href="about.html">
+            <img class="slide" src="image/banner1.jpeg" alt="Banner 1">
+            <div class="slideText">
+                <h1>Join Us Now</h1><br>
+                <h1>Click for location</h1>
+            </div>
+        </a>
+        <a href="about.html">
+            <img class="slide" src="image/banner2.jpeg" alt="Banner 2">
+            <div class="slideText">
+ 
+            </div>
+        </a>
+        <a href="about.html">
+            <img class="slide" src="image/banner3.webp" alt="Banner 3">
+            <div class="slideText">
+     
+            </div>
+        </a>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
+
+
+
+    <!-- Main Category Boxes-->
+
+    <h1>Main Categories</h1>
+    <div class="categoryMain">
+        <div class="categoryContent">
+            <h2>In-shop Product for sale</h2>
+            <a href="menu.html"><img src="image/fitness.jpeg" alt="Accessories"></a>
+            <a href="menu2.html"><img src="image/supplement.jpeg" alt="Supplement"></a>
+        </div>
+    </div>
+
+   
+        <!-- Review Content -->
+        <div class="contentWrapper">
+
+                <<div class="rowReview">
+                    <div class="contentWrapper">
+                        <!-- Harvard Article Summary -->
+                        <div class="content" id="article1">
+                            <span class="textWrapper">
+                                <span></span>Fitness Advice
+                            </span>
+                            <h2>Stop Making These Common Workout Mistakes</h2>
+                            <p>
+                                Even seasoned athletes can fall into the trap of common workout mistakes. Harvard Health offers
+                                insightful advice on avoiding these pitfalls to ensure your fitness journey is both safe and effective.
+                                Proper form, gradual progression, and balanced routines are key to achieving your goals.
+                            </p>
+                            <a href="https://www.health.harvard.edu/staying-healthy/stop-making-these-common-workout-mistakes" target="_blank" class="articleLink">Read More</a>
+                        </div>
+        
+                        <!-- Mind.org Article Summary -->
+                        <div class="content" id="article2">
+                            <span class="textWrapper">
+                                <span></span>Mental Health and Fitness
+                            </span>
+                            <h2>Over-Exercising and Exercise Addiction</h2>
+                            <p>
+                                Physical activity is crucial for mental health, but it’s important to recognize when exercise becomes
+                                excessive. Mind.org provides guidance on the signs of exercise addiction and how to maintain a healthy
+                                balance. Listen to your body and prioritize well-being to avoid the pitfalls of over-exercising.
+                            </p>
+                            <a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/physical-activity-exercise-and-mental-health/over-exercising-and-exercise-addiction/" target="_blank" class="articleLink">Read More</a>
+                        </div>
+        
+                        <!-- Additional Article 1 -->
+                        <div class="content" id="article3">
+                            <span class="textWrapper">
+                                <span></span>Strength Training
+                            </span>
+                            <h2>Maximize Your Strength Training Routine</h2>
+                            <p>
+                                Strength training is essential for building muscle and improving overall fitness. This article covers key
+                                strategies for maximizing your strength training routine, including proper technique, rest periods, and
+                                progressive overload.
+                            </p>
+                            <a href="https://www.example.com/maximize-strength-training" target="_blank" class="articleLink">Read More</a>
+                        </div>
+        
+                        <!-- Additional Article 2 -->
+                        <div class="content" id="article4">
+                            <span class="textWrapper">
+                                <span></span>Cardio Workouts
+                            </span>
+                            <h2>The Benefits of High-Intensity Interval Training (HIIT)</h2>
+                            <p>
+                                High-Intensity Interval Training (HIIT) is a powerful cardio workout that can help you burn calories and
+                                improve cardiovascular health in less time. Learn about the benefits of HIIT and how to incorporate it
+                                into your fitness routine.
+                            </p>
+                            <a href="https://www.example.com/hiit-benefits" target="_blank" class="articleLink">Read More</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+
+            
+            
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footerCol">
+                    <h4>Shop With Us</h4>
+ <ul>
+                            <li><a href="login.html">Register</a></li>
+                            <li><a href="about.html">About us</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Customer Care</h4>
+                        <ul>
+                            <li><a href="faq.html">Help & FAQ</a></li>
+                            <li><a href="rating.html">Rate Us</a></li>
+                            <li><a href="contact.html">Enquiry</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footerCol">
+                        <h4>Follow Us</h4>
+                        <div class="socialMedia">
+                            <a href="https://www.facebook.com/"><img src="headerNfooter/facebook.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/"><img src="headerNfooter/insta.png" alt="Instagram"></a>
+                            <a href="https://www.tiktok.com/explore"><img src="headerNfooter/tiktok.png" alt="Tiktok"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+</body>
+
+</html>
