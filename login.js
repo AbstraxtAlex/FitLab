@@ -58,7 +58,7 @@ function Register() {
 
 function checkPasswordStrength(password) {
     // Check password length
-    if (password.length < 😎 {
+    if (password.length < 8 {
         return "Weak"; // Password is too short
     }
 
