@@ -1,3 +1,4 @@
+Oscar Yong
 <html>
 
 <head>
@@ -29,56 +30,50 @@
     </header>
 
 
+   
     <div class="formBox">
-        <div class="buttonBox">
-            <button type="button" class="toggleButton" id="registBtn" onclick="RegisInput()"style="color: rgb(255, 94, 14);">Register</button>
-        </div>
-
-        <hr style="background-color:lightgray;">
-
-        <div>
-            <div id="register" class="UserInput">
-                <h2>Register</h2>
-
-                <div class="inputGroup">
-                    <label for="RegisterUsername">Username</label><br>
-                    <input name="RegisterUsername" id="RegisterUsername" type="text" placeholder="Enter new username"
-                        required>
+        <div class="formContainer">
+            <div class="registerContainer">
+                <div class="buttonBox">
+                    <button type="button" class="toggleButton" id="registBtn" onclick="RegisInput()" style="color: rgb(255, 94, 14);">Register</button>
                 </div>
-
-                <div class="inputGroup">
-                    <label for="RegisterPassword">Password</label><br>
-                    <input name="RegisterPassword" id="RegisterPassword" type="password"
-                        placeholder="Enter new password" required>
-                    <br>
-                    <small id="passwordHelp" style="color: red; font-size: 11px ;">Hint: The password must be at least 8 characters long,
-                        contains of alphabetic character and number</small>
+                <hr style="background-color:lightgray;">
+                <div id="register" class="UserInput">
+                  
+                    <div class="inputGroup">
+                        <label for="RegisterUsername">Username</label><br>
+                        <input name="RegisterUsername" id="RegisterUsername" type="text" placeholder="Enter new username" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="RegisterPassword">Password</label><br>
+                        <input name="RegisterPassword" id="RegisterPassword" type="password" placeholder="Enter new password" required>
+                        <br>
+                        <small id="passwordHelp" style="color: red; font-size: 11px ;">Hint: The password must be at least 8 characters long, contains alphabetic characters and numbers</small>
+                    </div>
+                    <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
+                    <div class="inputGroup">
+                        <button onclick="Register()">Register</button>
+                    </div>
                 </div>
-
-                <p>
-                    Your personal data will be used to support your experience throughout this website,
-                    to manage access to your account, and for other purposes described in our privacy policy.
-                </p>
-
-                <div class="inputGroup">
-                    <button onclick="Register()">Register</button>
-                </div>
+            </div>
     
+            <div class="bmiContainer">
+                <div class="buttonBox">
+                    <button type="button" class="toggleButton" id="registBtn" onclick="RegisInput()" style="color: rgb(255, 94, 14);">BMI Calculator</button>
+                </div>
+                <form id="bmiForm">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" required>
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" required>
+                    <button type="submit" style="padding: 10px 20px; background-color: #ff5e0e; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; transition: background-color 0.3s ease;">Calculate BMI</button>
+
+                </form>
+                <div class="result" id="bmiResult"></div>
             </div>
         </div>
-
-        <h2>BMI Calculator</h2>
-            <form id="bmiForm">
-                <label for="weight">Weight (kg):</label>
-                <input type="number" id="weight" required>
-                <label for="height">Height (cm):</label>
-                <input type="number" id="height" required>
-                <button type="submit">Calculate BMI</button>
-            </form>
-            <div class="result" id="bmiResult"></div>
-        </div>
-
     </div>
+        
 
     <footer>
         <div class="container">
@@ -86,7 +81,7 @@
                 <div class="footerCol">
                     <h4>Shop With Us</h4>
                     <ul>
-                        <li><a href="login.html">Register</a></li>
+                        <li><a href="login.html">Register and BMI calculator</a></li>
                         <li><a href="about.html">About us</a></li>
 
                     </ul>
@@ -115,4 +110,4 @@
 
 </body>
 
-</html>
+</html
