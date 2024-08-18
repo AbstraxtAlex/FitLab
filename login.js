@@ -1,6 +1,3 @@
-//Toggles button for the Login and Register
-
-
 function RegisInput() {
     document.getElementById('register').style.display = "block";
     document.getElementById('login').style.display = "none";
@@ -61,7 +58,7 @@ function Register() {
 
 function checkPasswordStrength(password) {
     // Check password length
-    if (password.length < 8) {
+    if (password.length < 😎 {
         return "Weak"; // Password is too short
     }
 
@@ -91,42 +88,12 @@ function isValidUsername(username) {
 }
 
 
-document.getElementById('recipeForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    let query = document.getElementById('query').value;
-
-    // Fetch recipes from the Spoonacular API
-    const apiKey = 'YOUR_SPOONACULAR_API_KEY';
-    const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=6&apiKey=${apiKey}`;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const recipesContainer = document.getElementById('recipes');
-            recipesContainer.innerHTML = '';
-
-            if (data.results && data.results.length > 0) {
-                data.results.forEach(recipe => {
-                    const recipeElement = document.createElement('div');
-                    recipeElement.classList.add('recipe');
-                    
-                    recipeElement.innerHTML = `
-                        <img src="${recipe.image}" alt="${recipe.title}">
-                        <h3>${recipe.title}</h3>
-                        <p><a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">View Recipe</a></p>
-                    `;
-                    recipesContainer.appendChild(recipeElement);
-                });
-            } else {
-                recipesContainer.innerHTML = '<p>No recipes found. Try a different search.</p>';
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching the recipes:', error);
-        });
-});
-
+document.getElementById('bmiForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const weight = parseFloat(document.getElementById('weight').value);
+    const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
+    const bmi = weight / (height * height);
+    const resultElement = document.getElementById('bmiResult');
+    resultElement.textContent = Your BMI is ${bmi.toFixed(2)};
 
 });
-
