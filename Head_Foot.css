@@ -168,15 +168,6 @@ footer{
         width: 100%;
     }
 
-    footer .container {
-        padding: 0 20px;
-    }
-
-    .footerCol {
-        width: 100%;
-        padding-bottom: 20px;
-    }
-}
 
 /* For mobile phones */
 @media only screen and (max-width: 480px) {
@@ -223,21 +214,6 @@ footer{
     .AccountNav img {
         width: 20px;
         height: 20px;
-    }
-}
-
-
-    footer {
-        padding: 40px 0;
-    }
-
-    .footerCol {
-        width: 100%;
-        padding-bottom: 20px;
-    }
-
-    footer ul li a {
-        font-size: 14px;
     }
 }
 
