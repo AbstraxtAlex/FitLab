@@ -140,4 +140,9 @@ body{
         padding: 12px 20px; 
         font-size: 14px; 
     }
+
+        .contact-right img {
+        max-width:80%;
+        height: auto; 
+    }
 }
