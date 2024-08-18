@@ -1,3 +1,4 @@
+
 function RegisInput() {
     document.getElementById('register').style.display = "block";
     document.getElementById('login').style.display = "none";
@@ -58,7 +59,7 @@ function Register() {
 
 function checkPasswordStrength(password) {
     // Check password length
-    if (password.length < 8 {
+    if (password.length < 8) {
         return "Weak"; // Password is too short
     }
 
@@ -94,6 +95,7 @@ document.getElementById('bmiForm').addEventListener('submit', function(event) {
     const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
     const bmi = weight / (height * height);
     const resultElement = document.getElementById('bmiResult');
-    resultElement.textContent = Your BMI is ${bmi.toFixed(2)};
+    resultElement.textContent = `Your BMI is ${bmi.toFixed(2)}`;
 
 });
+
