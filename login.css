@@ -1,64 +1,72 @@
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-.formBox{
-    width: 45%;
-    height: 57%;
-    position: relative;
+.formBox {
+    width: 70%; /* Adjusted to accommodate both sections */
     margin: auto;
     min-height: 100vh;
     padding-top: 20px;
 }
 
-.buttonBox{
+.formContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Space between register and BMI calculator */
+}
+
+.registerContainer, .bmiContainer {
+    width: 48%; /* Adjusted width for both containers */
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttonBox {
     width: 235px;
     margin: 5px auto;
     position: relative;
 }
 
-.toggleButton{
+.toggleButton {
     padding: 10px 30px;
     position: relative;
-
-    /* Button properties */
     cursor: pointer;
     background: transparent;
     border: 0;
     outline: none;
-
-    /* Text Decorations */
-    font-size: 15px;
+    font-size: 50px;
     font-weight: bold;
 }
 
-.UserInput{
+.UserInput {
     display: block;
     position: relative;
     width: 80%;
     margin: auto;
 }
 
-.UserInput h2{
+.UserInput h2 {
     font-size: 40px;
     letter-spacing: 2px;
 }
 
-
-.inputGroup{
+.inputGroup {
     padding: 10px;
 }
 
-.inputGroup input{
+.inputGroup input {
     padding: 7px;
     width: 90%;
 }
 
-.inputGroup button{
+.inputGroup button {
     padding: 10px 30px;
     cursor: pointer;
-    background-color:rgb(255, 94, 14);
+    background-color: rgb(255, 94, 14);
     border-radius: 4px;
     border: 0;
     outline: none;
@@ -66,17 +74,35 @@ body{
     font-weight: bold;
 }
 
-.result{
-    font-size: large;
-    color:red;
+.bmiContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+.bmiContainer form input,
+.bmiContainer form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
+.result {
+    font-size: large;
+    color: red;
+}
 
-@media screen and (max-width: 768px){
-    .formBox{
+@media screen and (max-width: 768px) {
+    .formBox {
         width: 100%;
-        margin: auto 0; 
+        margin: auto 0;
     }
     
+    .formContainer {
+        flex-direction: column; /* Stack the sections vertically */
+    }
+
+    .registerContainer, .bmiContainer {
+        width: 100%; /* Full width for each section */
+    }
 }
