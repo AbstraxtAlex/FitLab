@@ -91,30 +91,40 @@ function isValidUsername(username) {
 }
 
 
-document.getElementById('bmiForm').addEventListener('submit', function(e) {
+document.getElementById('recipeForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let weight = document.getElementById('weight').value;
-    let height = document.getElementById('height').value;
+    let query = document.getElementById('query').value;
 
-    // Convert height from cm to meters
-    height = height / 100;
+    // Fetch recipes from the Spoonacular API
+    const apiKey = 'YOUR_SPOONACULAR_API_KEY';
+    const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=6&apiKey=${apiKey}`;
 
-    // Use an API to calculate BMI
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
-            'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
-        }
-    };
-
-    fetch(`https://body-mass-index-bmi-calculator.p.rapidapi.com/metric?weight=${weight}&height=${height}`, options)
+    fetch(apiUrl)
         .then(response => response.json())
-        .then(response => {
-            document.getElementById('result').textContent = `Your BMI is ${response.bmi}`;
+        .then(data => {
+            const recipesContainer = document.getElementById('recipes');
+            recipesContainer.innerHTML = '';
+
+            if (data.results && data.results.length > 0) {
+                data.results.forEach(recipe => {
+                    const recipeElement = document.createElement('div');
+                    recipeElement.classList.add('recipe');
+                    
+                    recipeElement.innerHTML = `
+                        <img src="${recipe.image}" alt="${recipe.title}">
+                        <h3>${recipe.title}</h3>
+                        <p><a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">View Recipe</a></p>
+                    `;
+                    recipesContainer.appendChild(recipeElement);
+                });
+            } else {
+                recipesContainer.innerHTML = '<p>No recipes found. Try a different search.</p>';
+            }
         })
-        .catch(err => console.error(err));
+        .catch(error => {
+            console.error('Error fetching the recipes:', error);
+        });
 });
 
 
