@@ -236,6 +236,96 @@ a {
     }
     
 
+@media only screen and (max-width: 480px) {
+
+/*********************** Menu pages ********************************/
+    .container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .listProduct {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        transition: none;
+        flex-wrap: wrap;
+        margin: 20px 20px 50px 20px;
+        gap: 20px;
+    }
+
+    .headerImg {
+        margin: 0 auto;
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .nameAndFilter {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        position: relative;
+        gap: 10px;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pageName {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(250, 250, 230);
+        text-align: center;
+        box-shadow: 0 1rem 1.5rem -0.25rem hsla(0, 0%, 0%, 0.45);
+        border-radius: 15px;
+        width: 100%;
+        height: 60px;
+    }
+
+    .pageName h1 {
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .filterNav {
+        border: 2px solid black;
+        gap: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .filterTitle {
+        font-size: medium;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 5px 15px;
+        background-color: black;
+        color: white;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .filter {
+        padding: 0px 0px 0px 20px;
+    }
+
+    .filter button {
+        background-color: #fff;
+        color: black;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        width: 150px;
+        height: 40px;
+        margin: 5px 5px;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+    }
+}
 
 
 }
