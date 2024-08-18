@@ -91,13 +91,32 @@ function isValidUsername(username) {
 }
 
 
-document.getElementById('bmiForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const weight = parseFloat(document.getElementById('weight').value);
-    const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
-    const bmi = weight / (height * height);
-    const resultElement = document.getElementById('bmiResult');
-    resultElement.textContent = `Your BMI is ${bmi.toFixed(2)}`;
+document.getElementById('bmiForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let weight = document.getElementById('weight').value;
+    let height = document.getElementById('height').value;
+
+    // Convert height from cm to meters
+    height = height / 100;
+
+    // Use an API to calculate BMI
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
+            'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
+        }
+    };
+
+    fetch(`https://body-mass-index-bmi-calculator.p.rapidapi.com/metric?weight=${weight}&height=${height}`, options)
+        .then(response => response.json())
+        .then(response => {
+            document.getElementById('result').textContent = `Your BMI is ${response.bmi}`;
+        })
+        .catch(err => console.error(err));
+});
+
 
 });
 
