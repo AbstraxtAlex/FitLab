@@ -208,13 +208,13 @@ img.displaySlide {
 
 @media only screen and (max-width: 480px) {
     h1 {
-        font-size: 40px;
-        padding-top: 20px;
+        font-size: 35px;
+        padding-top: 15px;
     }
 
     h2 {
-        font-size: 32px;
-        padding-top: 20px;
+        font-size: 28px;
+        padding-top: 15px;
     }
 
     .homeBanner h1 {
